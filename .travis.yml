@@ -19,6 +19,10 @@ env:
   - PUPPET_VERSION=2.7.13
   - PUPPET_VERSION=2.7.6
   - PUPPET_VERSION=2.6.9
+matrix:
+  exclude:
+    - rvm: 1.9.3
+      env: PUPPET_VERSION=2.6.9
 notifications:
   email: false
 gemfile: .gemfile
